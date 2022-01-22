@@ -5,7 +5,7 @@
 #define TRIG_PIN 12
 #define ECHO_PIN 11
 
-//Partie mesure distance
+
 SR04 sr04 = SR04(ECHO_PIN,TRIG_PIN);
 long a;
 
