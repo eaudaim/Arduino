@@ -1,9 +1,9 @@
 
 // Définition des variables
 
-int ledRouge = 2 ;  // Numéro de la borne alimentant la DEL Rouge
+int ledRouge = 2 ;  // Numéro de la borne alimentant la LED Rouge
 
-int ledVerte = 3 ;  // Numéro de la borne alimentant la DEL Verte
+int ledVerte = 3 ;  // Numéro de la borne alimentant la LED Verte
 
 int niveau ;  // Variable recueillant le niveau lu sur l'entrée A0
 
@@ -14,7 +14,7 @@ float uSeuil ;  // Limite pile usée / pile en bon état
 
 void setup() {
 
-  // put your setup code here, to run once:
+
 
   uSeuil = 1.30 ; // On fixe la valeur de la tension de seuil
 
@@ -35,7 +35,7 @@ void setup() {
 
 void loop() {
 
-  // put your main code here, to run repeatedly:
+
 
   niveau = analogRead(A0) ; // Lecture du signal sur l'entrée A0
 
@@ -43,17 +43,17 @@ void loop() {
 
   if (uPile >= uSeuil) { // Comparaison avec la tension définie comme seuil
 
-    digitalWrite(ledVerte, 1) ;  // On allume la DEL verte
+    digitalWrite(ledVerte, 1) ;  // On allume la LED verte
 
-    digitalWrite(ledRouge, 0) ;  // On éteint la DEL rouge
+    digitalWrite(ledRouge, 0) ;  // On éteint la LED rouge
 
   }
 
   else {
 
-    digitalWrite(ledVerte, 0) ;  // On éteint la DEL verte
+    digitalWrite(ledVerte, 0) ;  // On éteint la LED verte
 
-    digitalWrite(ledRouge, 1) ;  // On allume la DEL rouge
+    digitalWrite(ledRouge, 1) ;  // On allume la LED rouge
 
   }
 
